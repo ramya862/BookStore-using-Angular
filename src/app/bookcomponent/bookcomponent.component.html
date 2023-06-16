@@ -1,0 +1,23 @@
+<!---<h2>Programming Books List!</h2>
+<button (click)="handleClick()" [disabled]="isDisabled">Show Books</button>
+<button (click)="isShowing=!isShowing">
+    <ng-container *ngIf="!isShowing">ShowBooks</ng-container>
+    <ng-container *ngIf="isShowing">HideBooks</ng-container>
+
+</button>
+<input type="text" [(ngModel)]="names">
+{{names}}
+<ul *ngIf="isShowing">
+    <ng-container *ngFor="let singleBook of books ;let i=index">
+        <app-singlebook [book]="singleBook"></app-singlebook>
+    </ng-container>
+</ul>--->
+
+<h2 class="heading"><b><marquee>Shop your favourite Programming Book!</marquee></b></h2><br><br>
+<img class="center" src="https://repository-images.githubusercontent.com/584532852/a2bb209c-b2e2-4972-aff6-fd2b4b135e6f">
+<ul *ngIf="isShowing" class="flex flex-wrap justify-center">
+    <ng-container *ngFor="let singleBook of books; let i=index">
+        <app-singlebook [book]="singleBook" class="w-1/2 p-5 text-center">
+        </app-singlebook>
+    </ng-container>
+</ul>

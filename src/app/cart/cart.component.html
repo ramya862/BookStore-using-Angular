@@ -1,0 +1,8 @@
+<h1 style="color:blue"><b>Your Cart</b></h1>
+<div *ngIf="getcart().length > 0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBFFzZUeBmHvw5DUUYiaP8tBlrz0tMPCxU8ie-UhWI6A&usqp=CAU&ec=48665701">
+    <div *ngFor="let book of getcart(); let i=index;">
+        <p class="my-4 text-2xl">{{i+1}}. {{ book.name }}</p>
+    </div>
+</div>
+<div *ngIf="getcart().length == 0"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcmWOwbHYxXP4ml-WiRYWyRPNTK7NELIkyVBLIXKugfg&s"></div>
